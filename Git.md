@@ -1,8 +1,8 @@
 # Rename
-## On the branch you want to rename
+### On the branch you want to rename
 git branch -m new-name
 
-## On a different branch
+### On a different branch
 git branch -m old-name new-name
 
 # Delete branch
@@ -19,10 +19,17 @@ git reset --hard HEAD~1
 git rebase -i HEAD~3
 
 # Cherry pick
-git checkout master
-
+git checkout master  
 git cherry-pick <commit-hash>
 
 # Comparing two branches
 git diff branch_one..branch_two
 
+# To remove a submodule you need to:
+- Delete the relevant section from the .gitmodules file.
+- Stage the .gitmodules changes git add .gitmodules
+- Delete the relevant section from .git/config.
+- Run git rm --cached path_to_submodule (no trailing slash).
+- Run rm -rf .git/modules/path_to_submodule (no trailing slash).
+- Commit git commit -m "Removed submodule <name>"
+- Delete the now untracked submodule files rm -rf path_to_submodule
