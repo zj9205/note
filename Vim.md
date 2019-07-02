@@ -6,3 +6,7 @@
 - Place the cursor where you would like to paste your copied stuff.
 - Press `P` to paste it before your cursor, or `p` to paste it after the cursor.
 - You can copy and paste between buffers.
+
+# Deleta or cut
+Pressing `dd` will remove that line (actually it will cut it). So you can paste it via `p`.
+
