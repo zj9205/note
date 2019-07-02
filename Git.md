@@ -23,6 +23,10 @@ git rebase -i HEAD~3
 # Comparing two branches
 git diff branch_one..branch_two
 
+# See the changes between two commits
+git diff hash_1 hash_2 > my.patch
+git apply my.patch
+
 # Create tag
 - gco master
 - git pull origin master
