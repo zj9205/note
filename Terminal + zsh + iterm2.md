@@ -15,7 +15,9 @@
 - `git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k`
 - edit `~/.zshrc`: `ZSH_THEME="powerlevel9k/powerlevel9k"`
 
-
+### Install Plugins
+- `git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions`
+- `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting`
 
 # Websites
 ### setting
