@@ -1,9 +1,17 @@
 # Change Height of UIProgressView in Swift
+
+
+
 ### By Code
 masteryProgress.transform = masteryProgress.transform.scaledBy(x: 1, y: 20)
 
+
+
 ### By SB/IB
 Set Height Constraint from Interface Builder
+![UIKit-UIProgressView-Interface-Builder](../Resources/UIKit-UIProgressView-Interface-Builder.png)
+
+
 
 ### adding it as an extension to UIProgressView
 ```Swift
@@ -22,7 +30,7 @@ extension UIProgressView {
     }   
 }
 ```
-![UIKit-UIProgressView-Interface-Builder](../Resources/UIKit-UIProgressView-Interface-Builder.png)
+
 
 
 ### Create a custom class of UIProgressView and override func layoutSubviews() to add a custom mask layer:
