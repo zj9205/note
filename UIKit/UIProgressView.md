@@ -22,6 +22,8 @@ extension UIProgressView {
     }   
 }
 ```
+![UIKit-UIProgressView-Interface-Builder](../Resources/UIKit-UIProgressView-Interface-Builder.png)
+
 
 ### Create a custom class of UIProgressView and override func layoutSubviews() to add a custom mask layer:
 ```Swift
@@ -35,3 +37,4 @@ extension UIProgressView {
         layer.mask = maskLayer
     }
 ```
+![UIKit-UIProgressView-cornerRadius](../Resources/UIKit-UIProgressView-Interface-Builder.png)
