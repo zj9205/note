@@ -37,4 +37,4 @@ extension UIProgressView {
         layer.mask = maskLayer
     }
 ```
-![UIKit-UIProgressView-cornerRadius](../Resources/UIKit-UIProgressView-Interface-Builder.png)
+![UIKit-UIProgressView-cornerRadius](../Resources/UIKit-UIProgressView-cornerRadius.png)
