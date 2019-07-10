@@ -6,7 +6,7 @@
  - Lazy variables are not initialised atomically and so is `not` thread safe.
  - You can use `self` inside the closure of a lazy property.  It will not cause any retain cycles.  The reason is that the immediately applied closure {}() is considered `@noescape`.  It does not retain the captured self.
 
-<br/>
+
 
 # @objcMembers and @objc
 
@@ -22,4 +22,14 @@ If you want all methods in a class to be exposed to Objective-C you can use a sh
 }
 ```
 
-<br/>
+
+
+# AnyObject and Any
+
+`AnyObject` refers to any instance of a class, and is equivalent to id in Objective-C. It’s useful when you specifically want to work with a reference type, because it won’t allow any of Swift’s structs or enums to be used. AnyObject is also used when you want to restrict a protocol so that it can be used only with classes.
+
+`Any` refers to any instance of a class, struct, or enum – literally anything at all.
+
+```Swift
+let values: [Any] = [1, 2, "Fish"]
+```
