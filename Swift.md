@@ -85,3 +85,162 @@ class HomeView: UIView {
     }
 }
 ```
+
+
+
+# closeAppElegantly.swift
+
+```Swift
+func showMessageResetApp() {
+    let message = "We need to restart the app. \n Please reopen the app after this."
+    let exitAppAlert = UIAlertController(title: "Restart is needed",
+                                         message: message,
+                                         preferredStyle: .alert)
+    
+    let resetApp = UIAlertAction(title: "Close Now", style: .destructive) { (alert) -> Void in
+        // home button pressed programmatically - to thorw app to background
+        UIControl().sendAction(#selector(URLSessionTask.suspend), to: UIApplication.shared, for: nil)
+        // terminaing app in background
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+            exit(EXIT_SUCCESS)
+        })
+    }
+    
+    let laterAction = UIAlertAction(title: "Later", style: .cancel) { (alert) -> Void in
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    exitAppAlert.addAction(resetApp)
+    exitAppAlert.addAction(laterAction)
+    present(exitAppAlert, animated: true, completion: nil)
+}
+```
+
+
+
+# Swift Style Guide
+
+## Delegates
+When creating custom delegate methods, an unnamed first parameter should be the delegate source. (UIKit contains numerous examples of this.)
+```Swift
+func namePickerView(_ namePickerView: NamePickerView, didSelectName name: String)
+func namePickerViewShouldReload(_ namePickerView: NamePickerView) -> Bool
+```
+
+## Code Organization
+Use `extensions` to organize your code into logical blocks of functionality. 
+
+Each extension should be set off with a `// MARK: - ` comment to keep things well-organized.
+```Swift
+// MARK: - UITableViewDataSource
+```
+
+## Function Declarations
+Don't use `(Void)` to represent the lack of an input; simply use `()`. Use `Void` instead of `()` for closure and function outputs.
+
+```Swift
+func updateConstraints() -> Void {
+  // magic happens here
+}
+
+typealias CompletionHandler = (result) -> Void
+```
+
+## Closure Expressions
+Use `trailing closure` syntax only if there's a single closure expression parameter at the end of the argument list. Give the closure parameters descriptive names.
+```Swift
+UIView.animate(withDuration: 1.0) {
+  self.myView.alpha = 0
+}
+
+UIView.animate(withDuration: 1.0, animations: {
+  self.myView.alpha = 0
+}, completion: { finished in
+  self.myView.removeFromSuperview()
+})
+```
+
+For single-expression closures where the context is clear, use implicit returns:
+```Swift
+attendeeList.sort { a, b in
+  a > b
+}
+```
+
+## Constants
+```Swift
+enum Math {
+  static let e = 2.718281828459045235360287
+  static let root2 = 1.41421356237309504880168872
+}
+
+let hypotenuse = side * Math.root2
+```
+
+## Type Inference
+```Swift
+let message: String = "Click the button"
+let currentBounds: CGRect = computeViewBounds()
+var names: [String] = []
+var lookup: [String: Int] = [:]
+var faxNumber: Int?
+```
+
+## Functions vs Methods
+Preferred
+```Swift
+let sorted = items.mergeSorted()  // easily discoverable
+rocket.launch()  // acts on the model
+```
+Free Function Exceptions
+
+```Swift
+let tuples = zip(a, b)  // feels natural as a free function (symmetry)
+let value = max(x, y, z)  // another free function that feels natural
+```
+
+## Extending object lifetime
+`[weak self]` is preferred to `[unowned self]`
+```Swift
+resource.request().onComplete { [weak self] response in
+  guard let self = self else {
+    return
+  }
+  let model = self.updateModel(response)
+  self.updateUI(model)
+}
+```
+
+## Control Flow
+Prefer the `for-in` style of for loop over the `while-condition-increment` style.
+
+```Swift
+for _ in 0..<3 {
+  print("Hello three times")
+}
+
+for (index, person) in attendeeList.enumerated() {
+  print("\(person) is at position #\(index)")
+}
+
+for index in stride(from: 0, to: items.count, by: 2) {
+  print(index)
+}
+
+for index in (0...3).reversed() {
+  print(index)
+}
+```
+
+## Ternary Operator
+```Swift
+let value = 5
+result = value != 0 ? x : y
+
+let isHorizontal = true
+result = isHorizontal ? x : y
+```
+
+## Failing Guards
+`return, throw, break, continue, fatalError(), defer`
+
