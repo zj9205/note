@@ -33,3 +33,55 @@ If you want all methods in a class to be exposed to Objective-C you can use a sh
 ```Swift
 let values: [Any] = [1, 2, "Fish"]
 ```
+
+
+
+# Int vs NSNumber vs NSInteger
+
+`NSInteger` is a type definition that describes an integer
+```Swift
+typedef long NSInteger
+```
+When building 32-bit applications, NSInteger is a 32-bit integer. A 64-bit application treats NSInteger as a 64-bit integer. Most of the time you can replace int with NSInteger
+
+`NSNumber` is a subclass of NSValue that offers a value as any C scalar (numeric) type
+```Swift
+class NSNumber : NSValue
+```
+It helps you to store numeric types as object. It has methods to convert between different types and methods to retrieve a string representation of your numeric value.
+
+
+
+# Weak and Unowned
+
+According to Apple, you should always use unowned references when your object **can't outlive** its reference:
+> 
+> Use an unowned reference only when you are sure that the reference always refers to an instance that has not been deallocated.
+> 
+> If you try to access the value of an unowned reference after that instance has been deallocated, you’ll get a runtime error.
+> 
+> If the captured reference will never become nil, it should always be captured as an unowned reference, rather than a weak reference.
+```Swift
+// weak
+class HomeView: UIView {
+    weak var delegate: HomeViewDelegate?
+    func renderView() {
+        guard let delegate = delegate else { return }
+        delegate.homeViewDidUpdate()
+    }
+}
+
+// unowned
+class HomeView: UIView {
+    private unowned let delegate: HomeViewDelegate
+
+    init(delegate: HomeViewDelegate) {
+        self.delegate = delegate
+        super.init(frame: .zero)
+    }
+
+    func renderView() {
+        delegate.homeViewDidUpdate()
+    }
+}
+```
