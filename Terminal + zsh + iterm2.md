@@ -19,6 +19,22 @@
 - `git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions`
 - `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting`
 
+###
+open settings.json
+```TypeScript
+{
+    // "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.cursorBlinking": true,
+    // "terminal.integrated.enableBold": true,
+    "terminal.integrated.fontFamily": "MesloLGS Nerd Font",
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.rightClickBehavior": "copyPaste"
+}
+```
+
+
+
 # Websites
 ### setting
 - https://medium.com/@Clovis_app/configuration-of-a-beautiful-efficient-terminal-and-prompt-on-osx-in-7-minutes-827c29391961
