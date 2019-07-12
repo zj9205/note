@@ -1,12 +1,11 @@
 
-- git log
-- git diff fileName
-- git checkout fileNmae // rollback to the last commit
-
-- git commit -s
-<type in a commit message>
-
 .gitignore
+
+### checkout log 
+- git log 
+
+### rollback to the last commit
+- git checkout fileNmae 
 
 ### adding/removing
 - git add .
@@ -81,11 +80,18 @@ git rebase -i HEAD~3
 
 # Comparing
 ### between two branches
-git diff branch_one..branch_two
+- git diff branch_one..branch_two
 
 ### See the changes between two commits
-git diff hash_1 hash_2 > my.patch
-git apply my.patch
+- git diff hash_1 hash_2 > my.patch
+- git apply my.patch
+
+### between local and remote branch
+- git fetch
+- git diff master origin/master
+
+### check one file
+- git diff fileName
 
 
 
