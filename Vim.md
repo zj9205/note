@@ -10,3 +10,6 @@
 # Deleta or cut
 Pressing `dd` will remove that line (actually it will cut it). So you can paste it via `p`.
 
+# Enable syntax color
+- create/edit `~/.vimrc`
+- add `syntax on`
