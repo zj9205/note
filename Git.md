@@ -58,6 +58,10 @@ git branch -d branch_name
 - git pull
 - git merge new_branch/hash_number
 
+### If have conflict
+- git checkout --ours index.html
+- git checkout --theirs _layouts/default.html
+
 
 
 # Commit
