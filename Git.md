@@ -102,14 +102,21 @@ git rebase -i HEAD~3
 
 
 
-# Create tag
+# Tag
+### Create
 - gco master
 - git pull origin master
 - git merge hash_number
-- git tag <tagname>
+- git tag tag_name
 - git push origin --tags
 - git log --pretty=oneline --abbrev-commit v1.1..v1.2
 - git push
+
+### Rename
+git tag new_name old_name
+git tag -d old_name
+git push origin :refs/tags/old_name
+git push --tags
 
 
 
