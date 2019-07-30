@@ -3,6 +3,7 @@
 
 ### checkout log 
 - git log 
+- git reflog
 
 ### rollback to the last commit
 - git checkout fileNmae 
@@ -75,6 +76,7 @@ git rebase -i HEAD~3
 - git reset HEAD~
 - git reset --soft HEAD~1
 - git reset --hard HEAD~1
+- git reset --hard hash_number
 
 ### Cherry pick
 - git checkout master
@@ -85,6 +87,7 @@ git rebase -i HEAD~3
 # Comparing
 ### between two branches
 - git diff branch_one..branch_two
+
 
 ### See the changes between two commits
 - git diff hash_1 hash_2 > my.patch
