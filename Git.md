@@ -27,9 +27,9 @@
 - git stash
 - git stash apply
 - git stash clear
-To list the stashed modifications
+#### To list the stashed modifications
 - git stash list
-To show files changed in the last stash
+#### To show files changed in the last stash
 - git stash show
 
 
@@ -38,13 +38,13 @@ To show files changed in the last stash
 - git checkout master
 
 ### Rename
-- On the branch you want to rename:
-git branch -m new_name
-- On a different branch:
-git branch -m old_name new_name
+#### On the branch you want to rename:
+- git branch -m new_name
+#### On a different branch:
+- git branch -m old_name new_name
 
 ### Delete branch
-git branch -d branch_name
+- git branch -d branch_name
 
 ### Create branch
 - git checkout -b branch_name
@@ -67,10 +67,10 @@ git branch -d branch_name
 
 # Commit
 ### change newest commit message
-git commit --amend 
+- git commit --amend 
 
 ### Rebase
-git rebase -i HEAD~3
+- git rebase -i HEAD~3
 
 ### Reset commit
 - git reset HEAD~
@@ -121,7 +121,7 @@ git rebase -i HEAD~3
 ### Delete
 - git tag -d tag_name
 - git push origin :refs/tags/tag_name
-Alternative approach
+#### Alternative approach
 - git push --delete origin tag_name
 - git tag -d tag_name
 
