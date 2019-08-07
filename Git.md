@@ -113,10 +113,17 @@ git rebase -i HEAD~3
 - git push
 
 ### Rename
-git tag new_name old_name
-git tag -d old_name
-git push origin :refs/tags/old_name
-git push --tags
+- git tag new_name old_name
+- git tag -d old_name
+- git push origin :refs/tags/old_name
+- git push --tags
+
+### Delete
+- git tag -d tag_name
+- git push origin :refs/tags/tag_name
+Alternative approach
+- git push --delete origin tag_name
+- git tag -d tag_name
 
 
 
