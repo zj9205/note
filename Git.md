@@ -48,7 +48,7 @@
 
 ### Create branch
 - git checkout -b branch_name
-- git checkout -b branch_name a9c146a09505837ec03b
+- git checkout -b branch_name hash_number
 
 ### Rebase branch
 - git checkout new_branch
