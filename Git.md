@@ -1,22 +1,22 @@
 
 .gitignore
 
-### checkout log 
+### Checkout log 
 - git log 
 - git reflog
 
-### rollback to the last commit
+### Rollback to the last commit
 - git checkout fileNmae 
 
-### adding/removing
+### Adding/removing
 - git add .
 - git rm -- cached -r .
 - git rm --cached <file>
 
-### get git log of the target file
+### Get git log of the target file
 - git log --pretty=oneline <file>
 
-### init
+### Init
 - git init
 - git remote add newRemoteName __link__
 - git remote add origin git@github.com:dhalperi/test.git
@@ -50,7 +50,7 @@
 - git checkout -b branch_name
 - git checkout -b branch_name a9c146a09505837ec03b
 
-### rebase branch
+### Rebase branch
 - git checkout new_branch
 - git rebase base_branch
 
@@ -66,7 +66,7 @@
 
 
 # Commit
-### change newest commit message
+### Change newest commit message
 - git commit --amend 
 
 ### Rebase
@@ -82,10 +82,14 @@
 - git checkout master
 - git cherry-pick <commit-hash>
 
+### Rewriting History
+#### Splitting a Commit
+[I'm an inline-style link](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)
+
 
 
 # Comparing
-### between two branches
+### Between two branches
 - git diff branch_one..branch_two
 
 
@@ -93,11 +97,11 @@
 - git diff hash_1 hash_2 > my.patch
 - git apply my.patch
 
-### between local and remote branch
+### Between local and remote branch
 - git fetch
 - git diff master origin/master
 
-### check one file
+### Check one file
 - git diff fileName
 
 
