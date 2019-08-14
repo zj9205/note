@@ -83,8 +83,7 @@
 - git cherry-pick <commit-hash>
 
 ### Rewriting History
-#### Splitting a Commit
-[I'm an inline-style link](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)
+[Splitting a Commit](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)
 
 
 
