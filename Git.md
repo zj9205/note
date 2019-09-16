@@ -3,7 +3,10 @@
 
 ### Checkout log 
 - git log 
+
+### Undoing a change
 - git reflog
+- git reset --hard HEAD@{5}
 
 ### Rollback to the last commit
 - git checkout fileNmae 
