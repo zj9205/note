@@ -114,8 +114,6 @@ git reset --hard
 - git fetch
 - git diff master origin/master
 
-![Git-Diff](Resources/Git-Diff.png)
-
 ### check unstaging changes (index vs. working tree)
 #### Shows the changes between the working directory and the index. This shows what has been changed, but is not staged for a commit.
 - git diff
@@ -134,6 +132,8 @@ git reset --hard
 #### Shows all the changes between the working directory and HEAD (which includes changes in the index). This shows all the changes since the last commit, whether or not they have been staged for commit or not.
 - git diff HEAD
 - git diff HEAD file_name
+
+![Git-Diff](Resources/Git-Diff.png)
 
 
 
