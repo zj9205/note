@@ -20,7 +20,8 @@
 
 
 # Branch
-- git checkout master
+### Checkout branch
+- git checkout branch_name
 
 ### Rename
 #### On the branch you want to rename:
@@ -119,9 +120,10 @@ git reset --hard
 
 
 # Log
-#### Checkout commit history 
+### Checkout commit history 
 - git log 
-#### Checkout reference log 
+
+### Checkout reference log 
 - git reflog
 
 ### Get git log of the target file
@@ -133,7 +135,7 @@ git reset --hard
 
 
 # Submodule
-# To remove a submodule you need to:
+### To remove a submodule you need to:
 - Delete the relevant section from the .gitmodules file.
 - Stage the .gitmodules changes git add .gitmodules
 - Delete the relevant section from .git/config.
