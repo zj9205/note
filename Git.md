@@ -114,20 +114,26 @@ git reset --hard
 - git fetch
 - git diff master origin/master
 
-### Check one file
-- git diff fileName
+![Git-Diff](../Resources/Git-Diff.png)
 
-### check unstaging changes
+### check unstaging changes (index vs. working tree)
+#### Shows the changes between the working directory and the index. This shows what has been changed, but is not staged for a commit.
 - git diff
 - git diff file_name
 
-### check staging changes, with last commit
+### check diff between commits
+- git diff A B
+- git diff A:file_name B:file_name
+
+### check staging changes, with last commit (head vs. index)
+#### Shows the changes between the index and the HEAD (which is the last commit on this branch). This shows what has been added to the index and staged for a commit.
 - git diff –cached
 - git diff –cached file_name
 
-### check diff between commits
-git diff A B
-git diff A:file_name B:file_name
+### check unstaging changes with last commit (head vs. working tree)
+#### Shows all the changes between the working directory and HEAD (which includes changes in the index). This shows all the changes since the last commit, whether or not they have been staged for commit or not.
+- git diff HEAD
+- git diff HEAD file_name
 
 
 
