@@ -14,10 +14,10 @@
 ### Adding/removing
 - git add .
 - git rm -- cached -r .
-- git rm --cached <file>
+- git rm --cached file_name
 
 ### Get git log of the target file
-- git log --pretty=oneline <file>
+- git log --pretty=oneline file_name
 
 ### Init
 - git init
@@ -83,9 +83,13 @@
 
 ### Cherry pick
 - git checkout master
-- git cherry-pick <commit-hash>
+- git cherry-pick hash_number
 #### cherry pick without commit
-- git cherry-pick -n <commit-hash>
+- git cherry-pick -n hash_number
+#### cherry pick A to B, without A
+- git cherry-pick A..B
+#### cherry pick A to B, include A
+- git cherry-pick A^..B
 
 ### Rewriting History
 [Splitting a Commit](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)
