@@ -114,7 +114,7 @@ git reset --hard
 - git fetch
 - git diff master origin/master
 
-![Git-Diff](../Resources/Git-Diff.png)
+![Git-Diff](Resources/Git-Diff.png)
 
 ### check unstaging changes (index vs. working tree)
 #### Shows the changes between the working directory and the index. This shows what has been changed, but is not staged for a commit.
