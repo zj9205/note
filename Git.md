@@ -117,6 +117,18 @@ git reset --hard
 ### Check one file
 - git diff fileName
 
+### check unstaging changes
+- git diff
+- git diff file_name
+
+### check staging changes, with last commit
+- git diff –cached
+- git diff –cached file_name
+
+### check diff between commits
+git diff A B
+git diff A:file_name B:file_name
+
 
 
 # Log
