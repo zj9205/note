@@ -1,24 +1,6 @@
 
 .gitignore
 
-### Checkout log 
-- git log 
-
-### Undoing a change
-- git reflog
-- git reset --hard HEAD@{5}
-
-### Rollback to the last commit
-- git checkout fileNmae 
-
-### Adding/removing
-- git add .
-- git rm -- cached -r .
-- git rm --cached file_name
-
-### Get git log of the target file
-- git log --pretty=oneline file_name
-
 ### Init
 - git init
 - git remote add newRemoteName __link__
@@ -68,6 +50,29 @@
 
 
 
+# Change
+### Undoing a change
+- git reflog
+- git reset --hard HEAD@{5}
+
+### Adding
+- git add .
+
+### Removing from the tree
+- git rm --cached file_name
+- git rm -r --cached directory_name
+
+### Removing from the staging area
+- git reset HEAD file_name
+
+### Nuke all made changes for good, it will remove staged and unstaged changes
+git reset --hard
+
+### To only remove unstaged changes in the current working directory
+- git checkout -- .
+
+
+
 # Commit
 ### Change newest commit message
 - git commit --amend 
@@ -100,7 +105,6 @@
 ### Between two branches
 - git diff branch_one..branch_two
 
-
 ### See the changes between two commits
 - git diff hash_1 hash_2 > my.patch
 - git apply my.patch
@@ -111,6 +115,32 @@
 
 ### Check one file
 - git diff fileName
+
+
+
+# Log
+#### Checkout commit history 
+- git log 
+#### Checkout reference log 
+- git reflog
+
+### Get git log of the target file
+- git log --pretty=oneline file_name
+
+### Rollback to the last commit
+- git checkout fileNmae 
+
+
+
+# Submodule
+# To remove a submodule you need to:
+- Delete the relevant section from the .gitmodules file.
+- Stage the .gitmodules changes git add .gitmodules
+- Delete the relevant section from .git/config.
+- Run git rm --cached path_to_submodule (no trailing slash).
+- Run rm -rf .git/modules/path_to_submodule (no trailing slash).
+- Commit git commit -m "Removed submodule <name>"
+- Delete the now untracked submodule files rm -rf path_to_submodule
 
 
 
@@ -138,12 +168,3 @@
 - git tag -d tag_name
 
 
-
-# To remove a submodule you need to:
-- Delete the relevant section from the .gitmodules file.
-- Stage the .gitmodules changes git add .gitmodules
-- Delete the relevant section from .git/config.
-- Run git rm --cached path_to_submodule (no trailing slash).
-- Run rm -rf .git/modules/path_to_submodule (no trailing slash).
-- Commit git commit -m "Removed submodule <name>"
-- Delete the now untracked submodule files rm -rf path_to_submodule
