@@ -29,8 +29,8 @@
 #### On a different branch:
 - git branch -m old_name new_name
 #### Delete old remote branch and push new local branch. Reset the upstream branch for the new-name local branch.
--git push origin :old_name new_name
--git push origin -u new_name
+- git push origin :old_name new_name
+- git push origin -u new_name
 
 ### Delete branch
 - git branch -d branch_name
