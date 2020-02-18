@@ -23,6 +23,9 @@
   - switch back to bash: `chsh -s /bin/bash`
   - show all shells: `cat /etc/shells`
 
+### Download theme scheme
+- https://github.com/tomislav/osx-terminal.app-colors-solarized
+
 ### VS Code configure
 open settings.json
 ```TypeScript
