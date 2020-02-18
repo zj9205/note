@@ -16,8 +16,12 @@
 - edit `~/.zshrc`: `ZSH_THEME="powerlevel9k/powerlevel9k"`
 
 ### Install Plugins
+- `brew install zsh-autosuggestions zsh-syntax-highlighting`
 - `git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions`
 - `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting`
+
+### Download & Install Font
+- https://github.com/ryanoasis/nerd-fonts/releases
 
 ###
 open settings.json
@@ -39,11 +43,13 @@ open settings.json
 ### setting
 - https://medium.com/@Clovis_app/configuration-of-a-beautiful-efficient-terminal-and-prompt-on-osx-in-7-minutes-827c29391961
 - https://www.freecodecamp.org/news/how-to-configure-your-macos-terminal-with-zsh-like-a-pro-c0ab3f3c1156/
+
 ### powerlevel9k
 - https://github.com/bhilburn/powerlevel9k
 - https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config
 - https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions
 - https://github.com/bhilburn/powerlevel9k/wiki/Stylizing-Your-Prompt
+
 ### Font
 https://github.com/powerline/fonts
 https://github.com/gabrielelana/awesome-terminal-fonts
