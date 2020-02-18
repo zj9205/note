@@ -1,12 +1,4 @@
 # Setup
-### Install iterm2
-- `brew cask install iterm2`
-- Install a patched font
-  - https://github.com/powerline/fonts
-- `chsh -s /bin/zsh`
-  - switch back to bash: `chsh -s /bin/bash`
-  - show all shells: `cat /etc/shells`
-
 ### Install Zsh and Oh my Zsh
 - `brew install zsh zsh-completions`
 - `sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
@@ -23,7 +15,15 @@
 ### Download & Install Font
 - https://github.com/ryanoasis/nerd-fonts/releases
 
-###
+### Install iterm2
+- `brew cask install iterm2`
+- Install a patched font
+  - https://github.com/powerline/fonts
+- `chsh -s /bin/zsh`
+  - switch back to bash: `chsh -s /bin/bash`
+  - show all shells: `cat /etc/shells`
+
+### VS Code configure
 open settings.json
 ```TypeScript
 {
