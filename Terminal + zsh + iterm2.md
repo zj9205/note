@@ -46,6 +46,7 @@ open settings.json
 ### setting
 - https://medium.com/@Clovis_app/configuration-of-a-beautiful-efficient-terminal-and-prompt-on-osx-in-7-minutes-827c29391961
 - https://www.freecodecamp.org/news/how-to-configure-your-macos-terminal-with-zsh-like-a-pro-c0ab3f3c1156/
+- https://gist.github.com/kevin-smets/8568070
 
 ### powerlevel9k
 - https://github.com/bhilburn/powerlevel9k
