@@ -70,10 +70,16 @@
 - git reset HEAD file_name
 
 ### Nuke all made changes for good, it will remove staged and unstaged changes
-git reset --hard
+- git reset --hard
 
 ### To only remove unstaged changes in the current working directory
 - git checkout -- .
+
+### Revert a file 
+#### to a specific version 
+- git checkout hash_number -- file_1_to_restore file_2_to_restore
+#### to the commit before hash_number, append ~1 (where 1 is the number of commits you want to go back, it can be anything):
+- git checkout hash_number~1 -- file1/to/restore file2/to/restore
 
 
 
